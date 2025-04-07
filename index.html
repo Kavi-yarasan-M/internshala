@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="button">
+        <div class="btn1 btn">
+
+        </div>
+        <div class="btn2 btn">
+
+        </div>
+    </div>
+    <div id="container">
+        <div class="camera">
+           <img src="./img/camera.jfif" alt="">
+        </div>
+        <div class="content">
+            <div class="head">
+                <div class="main">
+                    <img src="./img/dog.png" alt="">
+                  <div class="icon">
+                     <i class="fa-solid fa-share-nodes"></i>
+                     <i class="fa-solid fa-gear"></i>
+                   </div>
+                </div>
+                <div class="main1">
+                    <h1>@theo_from_hsr <i class="fa-solid fa-circle-check" style="color: #07e79d;"></i></h1>
+                    <div class="edit">
+                    <p>EDIT PROFILE <i class="fa-solid fa-pen"></i></p>
+                    <p>- - - - - - - - - - - - - -</p>
+                    </div>
+                </div>
+                <div class="main3">
+                    <h1 style="display: flex; justify-content:flex-start; align-items: center; gap: 20px;"><img src="./img/india.jpg" style="width: 90px; border-radius: 50%;" alt=""> INDIA</h1>
+                    <p style="margin-top: 10px; font-size: 2.5rem; line-height: 50px; font-weight: bold; letter-spacing: 7px;">18 y/o with high ambitions. Want to build cool stuff!</p>
+                    <p style="font-size: 3.5rem;"><i class="fa-solid fa-user"></i> 2</p>
+                    <h2 style="font-size: 2.5rem;">FOLLOWING</h2>
+                </div>
+            </div>
+            <div class="nexthead">
+                  <a href="#" id="img"><h1 ><i class="fa-solid fa-book"></i> COLLECTION</h1></a>  
+                  <a href="#" id="content"><h1 ><i class="fa-solid fa-arrows-spin"></i> MANAGE TAGS</h1></a>  
+            </div>
+             
+            <div id="tproduct" class="show">
+             <div id="product">
+                        <div class="imgcon">
+                            <div class="img">
+                                <img src="./img/phone.jpg"   alt="">
+                                <img src="./img/phone1.jfif" alt="">
+                                <img src="./img/phone2.webp" alt="">
+                                <img src="./img/phone3.jpg" alt="">
+                            </div>
+                            <h1><i class="fa-regular fa-heart"></i> LIKED (32)</h1>
+                        </div>
+                        <div class="imgcon">
+                            <div class="img">
+                                <img src="./img/work.jfif"  alt="">
+                                <img src="./img/work1.webp" alt="">
+                            </div>
+                            <h1><i class="fa-regular fa-bookmark"></i> SAVED (23)</h1>
+                        </div>
+                        <div class="imgcon">
+                            <div class="img">
+                                <img src="./img/pcp.jfif"  alt="">
+                                <img src="./img/pcp1.png" alt="">
+                                <img src="./img/pcp2.gif" alt="">
+                                <img src="./img/pcp3.jfif" alt="">
+                            </div>
+                            <h1><i class="fa-regular fa-file"></i> FILES (3)</h1>
+                        </div>
+             </div>
+            </div>
+            <div id="tcontent">
+             <div id="nextcontent">
+                <div class="content1">
+                    <p>our recommendations work best when you let us known these things:</p>
+                </div>
+                <div class="content2">
+                    <div class="text">
+                         <h1>YOUR DIFFICULTY</h1>
+                         <p>You decide the level of challenge you want!</p>
+                    </div>
+                    <h1>></h1>
+                </div>
+                <hr>
+                <div class="content3">
+                    <div class="text">
+                        <h1>INTERESTS YOU LIKE</h1>
+                        <p>We'll use these to show you cool builds</p>
+                    </div>
+                    <h1>></h1>
+                </div>
+                <hr>
+                <div class="content4">
+                    <div class="text">
+                        <h1>TOOLS USED</h1>
+                        <p>We'll suggest better using these picks.</p>
+                    </div>
+                    <h1>></h1>
+                </div>
+             </div>
+            </div>
+             <footer>
+                <h1>glitch <span>house</span></h1>
+                <p>JOINED 2242 DAYS AGO</p>
+            </footer>
+        </div>
+    </div>
+    <script type="module">
+    const imgBtn = document.getElementById('img');          
+    const contentBtn = document.getElementById('content'); 
+    const product = document.getElementById('tproduct');
+    const nextcontent = document.getElementById('tcontent'); 
+
+    imgBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        product.classList.remove('show');
+        nextcontent.classList.add('show'); 
+        contentBtn.classList.remove('activet');
+        imgBtn.classList.add('activet');
+    });
+
+    contentBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        product.classList.add('show');
+        nextcontent.classList.remove('show'); 
+        contentBtn.classList.add('activet');
+        imgBtn.classList.remove('activet'); 
+    });
+    </script>
+</body>
+</html>
